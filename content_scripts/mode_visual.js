@@ -356,11 +356,11 @@ class VisualMode extends KeyHandlerMode {
 
   // A movement can be either a string or a function.
 VisualMode.prototype.movements = {
-  "l": "forward character",
-  "h": "backward character",
-  "j": "forward line",
-  "k": "backward line",
-  "e": "forward word",
+  "o": "forward character",
+  "y": "backward character",
+  "n": "forward line",
+  "e": "backward line",
+  "h": "forward word",
   "b": "backward word",
   "w": "forward vimword",
   ")": "forward sentence",
@@ -375,15 +375,15 @@ VisualMode.prototype.movements = {
   "aw"(count) { return this.movement.selectLexicalEntity(word, count); },
   "as"(count) { return this.movement.selectLexicalEntity(sentence, count); },
 
-  "n"(count) { return this.find(count, false); },
-  "N"(count) { return this.find(count, true); },
+  "k"(count) { return this.find(count, false); },
+  "K"(count) { return this.find(count, true); },
   "/"() {
     this.exit();
     return new FindMode({returnToViewport: true}).onExit(() => new VisualMode());
   },
 
-  "y"() { return this.yank(); },
-  "Y"(count) { this.movement.selectLine(count); return this.yank(); },
+  "j"() { return this.yank(); },
+  "J"(count) { this.movement.selectLine(count); return this.yank(); },
   "p"() { return chrome.runtime.sendMessage({handler: "openUrlInCurrentTab", url: this.yank()}); },
   "P"() { return chrome.runtime.sendMessage({handler: "openUrlInNewTab", url: this.yank()}); },
   "v"() { return new VisualMode; },
@@ -398,7 +398,7 @@ VisualMode.prototype.movements = {
       this.movement.collapseSelectionToFocus();
     return new CaretMode;
   },
-  "o"() { return this.movement.reverseSelection(); }
+  "l"() { return this.movement.reverseSelection(); }
 };
 
 class VisualLineMode extends VisualMode {

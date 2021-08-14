@@ -283,10 +283,10 @@ const Commands = {
 
 const defaultKeyMappings = {
   // Navigating the current page
-  "j": "scrollDown",
-  "k": "scrollUp",
-  "h": "scrollLeft",
-  "l": "scrollRight",
+  "n": "scrollDown",
+  "e": "scrollUp",
+  "y": "scrollLeft",
+  "o": "scrollRight",
   "gg": "scrollToTop",
   "G": "scrollToBottom",
   "zH": "scrollToLeft",
@@ -296,7 +296,7 @@ const defaultKeyMappings = {
   "d": "scrollPageDown",
   "u": "scrollPageUp",
   "r": "reload",
-  "yy": "copyCurrentUrl",
+  "jj": "copyCurrentUrl",
   "p": "openCopiedUrlInCurrentTab",
   "P": "openCopiedUrlInNewTab",
   "gi": "focusInput",
@@ -314,16 +314,16 @@ const defaultKeyMappings = {
   "f": "LinkHints.activateMode",
   "F": "LinkHints.activateModeToOpenInNewTab",
   "<a-f>": "LinkHints.activateModeWithQueue",
-  "yf": "LinkHints.activateModeToCopyLinkUrl",
+  "jf": "LinkHints.activateModeToCopyLinkUrl",
 
   // Using find
   "/": "enterFindMode",
-  "n": "performFind",
-  "N": "performBackwardsFind",
+  "k": "performFind",
+  "K": "performBackwardsFind",
 
   // Vomnibar
-  "o": "Vomnibar.activate",
-  "O": "Vomnibar.activateInNewTab",
+  "l": "Vomnibar.activate",
+  "L": "Vomnibar.activateInNewTab",
   "T": "Vomnibar.activateTabSelection",
   "b": "Vomnibar.activateBookmarks",
   "B": "Vomnibar.activateBookmarksInNewTab",
@@ -331,12 +331,12 @@ const defaultKeyMappings = {
   "gE": "Vomnibar.activateEditUrlInNewTab",
 
   // Navigating history
-  "H": "goBack",
-  "L": "goForward",
+  "Y": "goBack",
+  "O": "goForward",
 
   // Manipulating tabs
-  "K": "nextTab",
-  "J": "previousTab",
+  "E": "nextTab",
+  "N": "previousTab",
   "gt": "nextTab",
   "gT": "previousTab",
   "^": "visitPreviousTab",
@@ -346,7 +346,7 @@ const defaultKeyMappings = {
   "g$": "lastTab",
   "W": "moveTabToNewWindow",
   "t": "createTab",
-  "yt": "duplicateTab",
+  "jt": "duplicateTab",
   "x": "removeTab",
   "X": "restoreTab",
   "<a-p>": "togglePinTab",
