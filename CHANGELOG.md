@@ -1,3 +1,22 @@
+1.67.3 (2022-10-29)
+
+- Fix copy-to-clipboard issue ([#4147](https://github.com/philc/vimium/issues/4147)) in visual mode.
+- Fix Vimium's dark mode styling in latest Firefox ([#4148](https://github.com/philc/vimium/issues/4148))
+
+1.67.2 (2022-10-17)
+
+- In Firefox, remove use of deprecated InstallTrigger, which was issuing a console warning
+  ([#4033](https://github.com/philc/vimium/issues/4033))
+- Fix the Vimium toolbar icon to accurately reflect whether keys are excluded
+  ([#4118](https://github.com/philc/vimium/pull/4118))
+- Fix usage of deprecated clipboard APIs, which affected commands using copy and paste
+  ([#4120](https://github.com/philc/vimium/issues/4120))
+- Fix bug preventing going into caret mode ([#3877](https://github.com/philc/vimium/pull/3877))
+
+1.67.1 (2022-01-19)
+
+- In Firefox 96+, make link hints open one tab, not two ([#3985](https://github.com/philc/vimium/pull/3985))
+
 1.67 (2021-07-09)
 
 - Dark mode: Vimium's UI (URL bar, help dialog, option page, etc.) are dark if the browser is configured for
