@@ -285,18 +285,18 @@ const defaultKeyMappings = {
   // Navigating the current page
   "n": "scrollDown",
   "e": "scrollUp",
-  "y": "scrollLeft",
-  "o": "scrollRight",
+  "m": "scrollLeft",
+  "i": "scrollRight",
   "gg": "scrollToTop",
   "G": "scrollToBottom",
   "zH": "scrollToLeft",
   "zL": "scrollToRight",
-  "<c-e>": "scrollDown",
-  "<c-y>": "scrollUp",
+  "<c-i>": "scrollDown",
+  "<c-m>": "scrollUp",
   "d": "scrollPageDown",
   "u": "scrollPageUp",
   "r": "reload",
-  "jj": "copyCurrentUrl",
+  "yy": "copyCurrentUrl",
   "p": "openCopiedUrlInCurrentTab",
   "P": "openCopiedUrlInNewTab",
   "gi": "focusInput",
@@ -306,7 +306,7 @@ const defaultKeyMappings = {
   "gF": "mainFrame",
   "gu": "goUp",
   "gU": "goToRoot",
-  "i": "enterInsertMode",
+  "a": "enterInsertMode",
   "v": "enterVisualMode",
   "V": "enterVisualLineMode",
 
@@ -314,7 +314,7 @@ const defaultKeyMappings = {
   "f": "LinkHints.activateMode",
   "F": "LinkHints.activateModeToOpenInNewTab",
   "<a-f>": "LinkHints.activateModeWithQueue",
-  "jf": "LinkHints.activateModeToCopyLinkUrl",
+  "yf": "LinkHints.activateModeToCopyLinkUrl",
 
   // Using find
   "/": "enterFindMode",
@@ -322,8 +322,8 @@ const defaultKeyMappings = {
   "K": "performBackwardsFind",
 
   // Vomnibar
-  "l": "Vomnibar.activate",
-  "L": "Vomnibar.activateInNewTab",
+  "o": "Vomnibar.activate",
+  "O": "Vomnibar.activateInNewTab",
   "T": "Vomnibar.activateTabSelection",
   "b": "Vomnibar.activateBookmarks",
   "B": "Vomnibar.activateBookmarksInNewTab",
@@ -331,8 +331,8 @@ const defaultKeyMappings = {
   "gE": "Vomnibar.activateEditUrlInNewTab",
 
   // Navigating history
-  "Y": "goBack",
-  "O": "goForward",
+  "M": "goBack",
+  "I": "goForward",
 
   // Manipulating tabs
   "E": "nextTab",

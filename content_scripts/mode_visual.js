@@ -356,8 +356,8 @@ class VisualMode extends KeyHandlerMode {
 
   // A movement can be either a string or a function.
 VisualMode.prototype.movements = {
-  "o": "forward character",
-  "y": "backward character",
+  "i": "forward character",
+  "m": "backward character",
   "n": "forward line",
   "e": "backward line",
   "h": "forward word",
@@ -382,8 +382,8 @@ VisualMode.prototype.movements = {
     return new FindMode({returnToViewport: true}).onExit(() => new VisualMode().init());
   },
 
-  "j"() { return this.yank(); },
-  "J"(count) { this.movement.selectLine(count); return this.yank(); },
+  "y"() { return this.yank(); },
+  "Y"(count) { this.movement.selectLine(count); return this.yank(); },
   "p"() { return chrome.runtime.sendMessage({handler: "openUrlInCurrentTab", url: this.yank()}); },
   "P"() { return chrome.runtime.sendMessage({handler: "openUrlInNewTab", url: this.yank()}); },
   "v"() { return new VisualMode().init(); },
@@ -398,7 +398,7 @@ VisualMode.prototype.movements = {
       this.movement.collapseSelectionToFocus();
     return new CaretMode().init();
   },
-  "l"() { return this.movement.reverseSelection(); }
+  "o"() { return this.movement.reverseSelection(); }
 };
 
 class VisualLineMode extends VisualMode {
